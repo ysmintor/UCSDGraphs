@@ -124,7 +124,7 @@ public class GraphAdjMatrix extends Graph {
 
 		List<Integer> distance2 = new ArrayList<Integer>();
 		for(int twoHopNeighbor = 0; twoHopNeighbor < numVertices; twoHopNeighbor++)
-//			if(twoHopAdjMatrix[v][twoHopNeighbor] > 0 && !distance2.contains(twoHopNeighbor))
+			// the number of entity means the multiple paths between two vertices.
 			if(twoHopAdjMatrix[v][twoHopNeighbor] > 0 )
 				for(int paths= twoHopAdjMatrix[v][twoHopNeighbor] ; paths > 0; paths--)
 					distance2.add(twoHopNeighbor);
